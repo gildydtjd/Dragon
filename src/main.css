@@ -4,3 +4,7 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
+
+  .scroll-container::-webkit-scrollbar{
+    display: none;
+  }

@@ -1,6 +1,7 @@
 import React from "react";
 import "../main.css";
 import styled, { keyframes } from "styled-components";
+import About from "./About";
 function Main(props) {
   const FadeIn = keyframes`
       from { opacity: 0; }
@@ -10,7 +11,8 @@ function Main(props) {
     scroll-snap-align: start;
     height: 100vh;
     background-color: ${(props) => props.color};
-    animation: ${FadeIn} 3s;
+    animation-name: ${FadeIn};
+    animation-duration: ${(props) => props.duration};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +20,7 @@ function Main(props) {
 
   return (
     <div className="scroll-container">
-      <Scroll>
+      <Scroll duration="3s">
         <div
           style={{
             width: "100%",
@@ -34,18 +36,7 @@ function Main(props) {
       </Scroll>
 
       <Scroll>
-        <div
-          style={{
-            width: "80%",
-            height: "500px",
-            display: "flex",
-            color: "white",
-            fontSize: "50px",
-            textAlign: "center",
-            justifyContent: "center",
-            backgroundColor: "white",
-          }}
-        ></div>
+        <About />
       </Scroll>
       <Scroll></Scroll>
       <Scroll></Scroll>
