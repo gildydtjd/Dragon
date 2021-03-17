@@ -7,7 +7,8 @@ function About(props) {
   const FadeIn = keyframes`
       from { opacity: 0; }
       to   { opacity: 1; }`;
-
+  console.log(setPlayState);
+  console.log(setVisible);
   const AboutDiv = styled.div`
     width: 100%;
     height: 100vh;
@@ -28,6 +29,7 @@ function About(props) {
     justify-content: right;
     align-items: center;
     position: relative;
+    background-image: url("/assets/img/back3.jpg");
   `;
   const AboutBox = styled.div`
     display: flex;
@@ -36,7 +38,7 @@ function About(props) {
     align-items: center;
     width: 450px;
     height: 600px;
-    background-color: #fee6d8;
+    background-color: #fff;
     box-shadow: 3px 3px 3px 3px grey;
     margin-left: 60%;
     flex-direction: column;
@@ -77,7 +79,7 @@ function About(props) {
   const AboutSNSBox = styled.div`
     width: 100%;
     height: 50px;
-    background-color: #fee6d8;
+    background-color: #fff;
     margin-top: 15px;
     display: flex;
     justify-content: center;
@@ -102,7 +104,6 @@ function About(props) {
   `;
 
   const AboutTitle = styled.p`
-    font-family: Georgia, "Malgun Gothic", serif;
     display: flex;
     margin-left: 100px;
     animation-name: ${FadeIn};
@@ -111,17 +112,33 @@ function About(props) {
     animation-play-state: ${playState};
     visibility: ${visible};
     animation-play-state: ${playState};
-    font-size: 15px;
-    padding: 15px 20px;
-    :hover {
-      font-weight: 700;
-    }
+    font-size: ${(props) => props.size};
+    font-weight: ${(props) => props.weight};
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    margin: 20px 100px;
+    padding: 0;
   `;
 
   const AboutA = styled.a`
     margin-left: 10px;
     text-decoration: none;
     color: black;
+  `;
+
+  const AboutButtonBox = styled.div`
+    display: flex;
+    justify-content: left;
+    margin-left: 15%;
+  `;
+  const AboutButton = styled.button`
+    border-radius: 10%;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    background-color: ${(props) => props.color};
+    color: ${(props) => props.fcolor};
+    border: #fff;
   `;
 
   return (
@@ -148,27 +165,34 @@ function About(props) {
             <a href="./">
               <SNS ur="/assets/img/twitter.svg" />
             </a>
-            <a href="./">
+            <a
+              href="https://github.com/gildydtjd"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SNS ur="/assets/img/git.svg" />
             </a>
           </AboutSNSBox>
         </AboutBox>
       </AboutLeft>
       <AboutContent>
-        <AboutTitle duration="4s" delay="1s">
-          이 름 : 길 용 성
+        <AboutTitle size="70px" weight="550">
+          Hello
         </AboutTitle>
-        <AboutTitle duration="4s" delay="2s">
-          나 이 : 29
+        <AboutTitle size="30px" weight="600">
+          Here's who I am & what I do
         </AboutTitle>
-        <AboutTitle duration="4s" delay="3s">
-          주 소 : 경기도 남양주
+        <AboutButtonBox>
+          <AboutButton color="dodgerblue" fcolor="#fff">
+            RESUME
+          </AboutButton>
+          <AboutButton>PROJECT</AboutButton>
+        </AboutButtonBox>
+        <AboutTitle size="20px" weight="600">
+          Technology : React, JavaScript, Css, Html
         </AboutTitle>
-        <AboutTitle duration="4s" delay="4s">
-          취 미 : 영화시청, 게임
-        </AboutTitle>
-        <AboutTitle duration="4s" delay="5s">
-          깃 : {""}
+        <AboutTitle size="20px" weight="600">
+          Git : {""}
           <AboutA
             href="https://github.com/gildydtjd"
             target="_blank"
@@ -177,8 +201,8 @@ function About(props) {
             github.com/gildydtjd
           </AboutA>
         </AboutTitle>
-        <AboutTitle duration="4s" delay="6s">
-          티스토리 : {""}
+        <AboutTitle size="20px" weight="600">
+          Tistory : {""}
           <AboutA
             href="https:dragon-world.tistory.com"
             target="_blank"

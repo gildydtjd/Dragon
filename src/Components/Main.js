@@ -2,7 +2,6 @@ import React from "react";
 import "../main.css";
 import styled, { keyframes } from "styled-components";
 import About from "./About";
-import main from "../main1.jpg";
 
 function Main(props) {
   const FadeIn = keyframes`
@@ -37,7 +36,7 @@ function Main(props) {
 
   return (
     <div className="scroll-container">
-      <Scroll ur={main}>
+      <Scroll ur="/assets/img/back4.jpg">
         <IntroBox duration="3s">
           <h2>Hello DragonWorld</h2>
         </IntroBox>
