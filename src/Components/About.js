@@ -27,7 +27,6 @@ function About(props) {
   const AboutLeft = styled.div`
     width: 50%;
     height: 100%;
-    background-color: #f5cfb7;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -35,6 +34,7 @@ function About(props) {
     background-image: url("/assets/img/back3.jpg");
     @media screen and (max-width: 768px) {
       width: 100%;
+      background-image: unset;
     }
   `;
   const AboutBox = styled.div`
