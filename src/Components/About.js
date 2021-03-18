@@ -4,282 +4,129 @@ import styled, { keyframes } from "styled-components";
 function About(props) {
   const [playState, setPlayState] = useState("running");
   const [visible, setVisible] = useState("visible");
-  const FadeIn = keyframes`
-      from { opacity: 0; }
-      to   { opacity: 1; }`;
-  console.log(setPlayState);
-  console.log(setVisible);
-  const AboutDiv = styled.div`
+
+  const StyledDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    visibility: ${visible};
-    animation-play-state: ${playState};
-    background-color: white;
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
-  `;
 
-  const AboutLeft = styled.div`
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    position: relative;
-    background-image: url("/assets/img/back3.jpg");
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-  `;
-  const AboutBox = styled.div`
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    height: 600px;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px 3px grey;
-    margin-left: 60%;
-    flex-direction: column;
-    @media screen and (max-width: 768px) {
+    .contents__left {
       position: relative;
-      margin-left: unset;
-      box-shadow: none;
+      width: 50%;
+      height: calc(100vh - 32px);
+      padding: 16px;
+      background-image: url(/assets/img/back3.jpg);
+    }
+
+    .contents__right {
+      width: 50%;
+      height: calc(100vh - 32px);
+      padding: 16px;
+    }
+
+    .contents__img-wrap {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background-color: #fff;
+      border: 1px solid #c9c9c9;
+      border-radius: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: -200px;
+      box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      .contents__img {
+        width: 50%;
+        height: 50%;
+        border-radius: 36px;
+        margin: 16px;
+      }
+
+      .contents__name {
+        p {
+          font-weight: 700;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+      }
+
+      .contents__tech {
+        span {
+          padding: 2px 4px;
+          border: 1px solid #eee;
+          border-radius: 2px;
+          margin-right: 4px;
+        }
+      }
+
+      .contents__social {
+        position: absolute;
+        width: 100%;
+        margin-bottom: 8px;
+        bottom: 0;
+
+        img {
+          width: 32px;
+          height: 32px;
+          margin: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .contents__left {
+        width: 100%;
+      }
+
+      .contents__right {
+        display: none;
+      }
     }
   `;
 
-  const AboutImage = styled.div`
-    background-image: url("/assets/img/dragon.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 300px;
-    visibility: ${visible};
-    animation-play-state: ${playState};
-    border-radius: 70%;
-  `;
+  const tech = ["React", "JavaScript", "Css", "Html", "styled-component"];
+  const social = [
+    "/assets/img/github.svg",
+    "/assets/img/tistory.svg",
+    "/assets/img/instagram.svg",
+    "/assets/img/twitter.svg",
+  ];
 
-  const AboutInfo = styled.div`
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  `;
-
-  const AboutInfoText = styled.p`
-    font-size: ${(props) => props.size};
-    font-weight: ${(props) => props.weight};
-    color: ${(props) => props.color};
-  `;
-
-  const AboutInfoTextBottom = styled.div`
-    background-color: blue;
-    width: 60px;
-    height: 2px;
-  `;
-
-  const AboutSNSBox = styled.div`
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `;
-
-  const SNS = styled.div`
-    background-image: url(${(props) => props.ur});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    margin: 20px;
-  `;
-
-  const AboutContent = styled.div`
-    width: 600px;
-    height: 400px;
-    visibility: ${visible};
-    animation-play-state: ${playState};
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      height: 100vh;
-      background-image: url("/assets/img/back3.jpg");
-      background-color: #00000080;
-    }
-  `;
-
-  const AboutTitle1 = styled.p`
-    display: flex;
-    margin-left: 100px;
-    animation-name: ${FadeIn};
-    animation-duration: ${(props) => props.duration};
-    animation-delay: ${(props) => props.delay};
-    animation-play-state: ${playState};
-    visibility: ${visible};
-    animation-play-state: ${playState};
-    font-size: ${(props) => props.size};
-    font-weight: ${(props) => props.weight};
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    margin: 20px 100px;
-    padding: 0;
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-      margin: 20px 30px;
-      padding-top: 50px;
-      color: white;
-    }
-  `;
-
-  const AboutTitle2 = styled.p`
-    display: flex;
-    margin-left: 100px;
-    animation-name: ${FadeIn};
-    animation-duration: ${(props) => props.duration};
-    animation-delay: ${(props) => props.delay};
-    animation-play-state: ${playState};
-    visibility: ${visible};
-    animation-play-state: ${playState};
-    font-size: ${(props) => props.size};
-    font-weight: ${(props) => props.weight};
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    margin: 20px 100px;
-    padding: 0;
-    @media screen and (max-width: 768px) {
-      font-size: 20px;
-      margin: 40px 40px;
-      color: white;
-    }
-  `;
-
-  const AboutA = styled.a`
-    margin-left: 10px;
-    text-decoration: none;
-    color: black;
-    @media screen and (max-width: 768px) {
-      color: white;
-    }
-  `;
-
-  const AboutButtonBox = styled.div`
-    display: flex;
-    justify-content: left;
-    margin-left: 15%;
-    @media screen and (max-width: 768px) {
-      margin-left: 8%;
-    }
-  `;
-  const AboutButton = styled.button`
-    border-radius: 10%;
-    width: 150px;
-    height: 30px;
-    margin: 10px;
-    background-color: ${(props) => props.color};
-    color: ${(props) => props.fcolor};
-    border: #fff;
-    @media screen and (max-width: 768px) {
-    }
-  `;
-
-  const Arrow = styled.div`
-    background-image: url("/assets/img/arrow.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    margin-top: 22%;
-    display: unset;
-    @media screen and (max-width: 768px) {
-      display: inline-block;
-    }
-  `;
+  const renderTechItem = (item) => {
+    return (
+      <span className="tech__item" key={`tect-${item}`}>
+        {item}
+      </span>
+    );
+  };
 
   return (
-    <AboutDiv>
-      <AboutLeft>
-        <AboutBox>
-          <AboutImage />
-          <AboutInfo>
-            <AboutInfoText size="20px" weight="600">
-              길용성
-            </AboutInfoText>
-            <AboutInfoTextBottom></AboutInfoTextBottom>
-            <AboutInfoText size="20px" weight="600">
-              Front-end Developer
-            </AboutInfoText>
-          </AboutInfo>
-          <AboutSNSBox>
-            <a href="./">
-              <SNS ur="/assets/img/facebook.svg" />
-            </a>
-            <a href="./">
-              <SNS ur="/assets/img/instagram.svg" />
-            </a>
-            <a href="./">
-              <SNS ur="/assets/img/twitter.svg" />
-            </a>
-            <a
-              href="https://github.com/gildydtjd"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SNS ur="/assets/img/git.svg" />
-            </a>
-          </AboutSNSBox>
-        </AboutBox>
-      </AboutLeft>
-      <AboutContent>
-        <AboutTitle1 size="70px" weight="550">
-          Hello
-        </AboutTitle1>
-        <AboutTitle1 size="30px" weight="600">
-          Here's who I am & what I do
-        </AboutTitle1>
-        <AboutButtonBox>
-          <AboutButton color="dodgerblue" fcolor="#fff">
-            RESUME
-          </AboutButton>
-          <AboutButton>PROJECT</AboutButton>
-        </AboutButtonBox>
-        <AboutTitle2 size="20px" weight="600">
-          Tech : React, JavaScript, Css, Html
-        </AboutTitle2>
-        <AboutTitle2 size="20px" weight="600">
-          Github : {""}
-          <AboutA
-            href="https://github.com/gildydtjd"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/gildydtjd
-          </AboutA>
-        </AboutTitle2>
-        <AboutTitle2 size="20px" weight="600">
-          Blog : {""}
-          <AboutA
-            href="https://dragon-world.tistory.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            dragon-world.tistory.com
-          </AboutA>
-        </AboutTitle2>
-        <Arrow></Arrow>
-      </AboutContent>
-    </AboutDiv>
+    <StyledDiv>
+      <div className="contents__left"></div>
+      <div className="contents__right"></div>
+      <div className="contents__img-wrap">
+        <img className="contents__img" src="/assets/img/dragon.jpg" alt="" />
+        <div className="contents__name">
+          <p>길 용성</p>
+          <p>Front-end Developer</p>
+        </div>
+        <div className="contents__tech">
+          {tech.map((item) => renderTechItem(item))}
+        </div>
+        <div className="contents__social">
+          {social.map((item) => (
+            <img key={`social-${item}`} src={item} alt="" />
+          ))}
+        </div>
+      </div>
+    </StyledDiv>
   );
 }
 

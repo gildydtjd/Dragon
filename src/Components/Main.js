@@ -1,7 +1,10 @@
 import React from "react";
-import "../main.css";
 import styled, { keyframes } from "styled-components";
+
+import "../main.css";
+
 import About from "./About";
+import ProjectPage from "./project/ProjectPage";
 
 function Main(props) {
   const FadeIn = keyframes`
@@ -40,6 +43,14 @@ function Main(props) {
     }
   `;
 
+  const ProjectInfoDiv = styled.div`
+    .project__title {
+    }
+
+    .project_content {
+    }
+  `;
+
   return (
     <div className="scroll-container">
       <Scroll ur="/assets/img/back4.jpg">
@@ -51,9 +62,32 @@ function Main(props) {
       <Scroll>
         <About />
       </Scroll>
-      <Scroll></Scroll>
-      <Scroll></Scroll>
-      <Scroll></Scroll>
+
+      <Scroll>
+        <ProjectPage
+          projectName="포트폴리오"
+          projectImages={[
+            "/assets/img/back4.jpg",
+            "/assets/img/dragon.jpg",
+            "/assets/img/back3.jpg",
+          ]}
+        >
+          <ProjectInfoDiv>
+            <p className="project__title">포트폴리오 프로젝트</p>
+            <p className="project__contents">
+              안녕하세요. 이 프로젝트는 포트폴리오 포트폴리오입니다.
+            </p>
+            <p className="project__contents">
+              media-query를 이용한 반응형 페이지의 적용과 styled-component,
+              react Hooks를 사용해보기 위해 만든 프로젝트입니다.
+            </p>
+            <p className="project__contents">
+              이 프로젝트를 진행하면서 느낀점은 styled-component를 사용함으로써
+              ~~ 어쩌구어쩌구 장점을 느꼈다
+            </p>
+          </ProjectInfoDiv>
+        </ProjectPage>
+      </Scroll>
     </div>
   );
 }
