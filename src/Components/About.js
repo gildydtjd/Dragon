@@ -19,6 +19,9 @@ function About(props) {
     visibility: ${visible};
     animation-play-state: ${playState};
     background-color: white;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   `;
 
   const AboutLeft = styled.div`
@@ -48,6 +51,7 @@ function About(props) {
     @media screen and (max-width: 768px) {
       position: relative;
       margin-left: unset;
+      box-shadow: none;
     }
   `;
 
@@ -109,11 +113,13 @@ function About(props) {
     visibility: ${visible};
     animation-play-state: ${playState};
     @media screen and (max-width: 768px) {
-      display: none;
+      width: 100%;
+      height: 100vh;
+      background-image: url("/assets/img/back3.jpg");
     }
   `;
 
-  const AboutTitle = styled.p`
+  const AboutTitle1 = styled.p`
     display: flex;
     margin-left: 100px;
     animation-name: ${FadeIn};
@@ -128,18 +134,52 @@ function About(props) {
       sans-serif;
     margin: 20px 100px;
     padding: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+      margin: 20px 30px;
+      padding-top: 50px;
+      color: white;
+    }
+  `;
+
+  const AboutTitle2 = styled.p`
+    display: flex;
+    margin-left: 100px;
+    animation-name: ${FadeIn};
+    animation-duration: ${(props) => props.duration};
+    animation-delay: ${(props) => props.delay};
+    animation-play-state: ${playState};
+    visibility: ${visible};
+    animation-play-state: ${playState};
+    font-size: ${(props) => props.size};
+    font-weight: ${(props) => props.weight};
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    margin: 20px 100px;
+    padding: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin: 40px 40px;
+      color: white;
+    }
   `;
 
   const AboutA = styled.a`
     margin-left: 10px;
     text-decoration: none;
     color: black;
+    @media screen and (max-width: 768px) {
+      color: white;
+    }
   `;
 
   const AboutButtonBox = styled.div`
     display: flex;
     justify-content: left;
     margin-left: 15%;
+    @media screen and (max-width: 768px) {
+      margin-left: 8%;
+    }
   `;
   const AboutButton = styled.button`
     border-radius: 10%;
@@ -149,6 +189,22 @@ function About(props) {
     background-color: ${(props) => props.color};
     color: ${(props) => props.fcolor};
     border: #fff;
+    @media screen and (max-width: 768px) {
+    }
+  `;
+
+  const Arrow = styled.div`
+    background-image: url("/assets/img/arrow.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin-top: 22%;
+    display: unset;
+    @media screen and (max-width: 768px) {
+      display: inline-block;
+    }
   `;
 
   return (
@@ -186,22 +242,22 @@ function About(props) {
         </AboutBox>
       </AboutLeft>
       <AboutContent>
-        <AboutTitle size="70px" weight="550">
+        <AboutTitle1 size="70px" weight="550">
           Hello
-        </AboutTitle>
-        <AboutTitle size="30px" weight="600">
+        </AboutTitle1>
+        <AboutTitle1 size="30px" weight="600">
           Here's who I am & what I do
-        </AboutTitle>
+        </AboutTitle1>
         <AboutButtonBox>
           <AboutButton color="dodgerblue" fcolor="#fff">
             RESUME
           </AboutButton>
           <AboutButton>PROJECT</AboutButton>
         </AboutButtonBox>
-        <AboutTitle size="20px" weight="600">
+        <AboutTitle2 size="20px" weight="600">
           Technology : React, JavaScript, Css, Html
-        </AboutTitle>
-        <AboutTitle size="20px" weight="600">
+        </AboutTitle2>
+        <AboutTitle2 size="20px" weight="600">
           Git : {""}
           <AboutA
             href="https://github.com/gildydtjd"
@@ -210,8 +266,8 @@ function About(props) {
           >
             github.com/gildydtjd
           </AboutA>
-        </AboutTitle>
-        <AboutTitle size="20px" weight="600">
+        </AboutTitle2>
+        <AboutTitle2 size="20px" weight="600">
           Tistory : {""}
           <AboutA
             href="https://dragon-world.tistory.com"
@@ -220,7 +276,8 @@ function About(props) {
           >
             dragon-world.tistory.com
           </AboutA>
-        </AboutTitle>
+        </AboutTitle2>
+        <Arrow></Arrow>
       </AboutContent>
     </AboutDiv>
   );
