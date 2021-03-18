@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 function About(props) {
-  const [playState, setPlayState] = useState("running");
-  const [visible, setVisible] = useState("visible");
+  // const [playState, setPlayState] = useState("running");
+  // const [visible, setVisible] = useState("visible");
 
   const StyledDiv = styled.div`
     display: flex;
