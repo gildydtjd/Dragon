@@ -83,7 +83,6 @@ function Main(props) {
             </p>
             <p className="project__contents">
               이 프로젝트를 진행하면서 느낀점은 styled-component를 사용함으로써
-              ~~ 어쩌구어쩌구 장점을 느꼈다
             </p>
           </ProjectInfoDiv>
         </ProjectPage>
