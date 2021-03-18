@@ -34,7 +34,6 @@ function About(props) {
     background-image: url("/assets/img/back3.jpg");
     @media screen and (max-width: 768px) {
       width: 100%;
-      background-image: unset;
     }
   `;
   const AboutBox = styled.div`
@@ -116,6 +115,7 @@ function About(props) {
       width: 100%;
       height: 100vh;
       background-image: url("/assets/img/back3.jpg");
+      background-color: #00000080;
     }
   `;
 
@@ -255,10 +255,10 @@ function About(props) {
           <AboutButton>PROJECT</AboutButton>
         </AboutButtonBox>
         <AboutTitle2 size="20px" weight="600">
-          Technology : React, JavaScript, Css, Html
+          Tech : React, JavaScript, Css, Html
         </AboutTitle2>
         <AboutTitle2 size="20px" weight="600">
-          Git : {""}
+          Github : {""}
           <AboutA
             href="https://github.com/gildydtjd"
             target="_blank"
@@ -268,7 +268,7 @@ function About(props) {
           </AboutA>
         </AboutTitle2>
         <AboutTitle2 size="20px" weight="600">
-          Tistory : {""}
+          Blog : {""}
           <AboutA
             href="https://dragon-world.tistory.com"
             target="_blank"
