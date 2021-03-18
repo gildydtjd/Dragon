@@ -34,11 +34,17 @@ function Main(props) {
     cursor: pointer;
   `;
 
+  const MainH2 = styled.h2`
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  `;
+
   return (
     <div className="scroll-container">
       <Scroll ur="/assets/img/back4.jpg">
         <IntroBox duration="3s">
-          <h2>Hello DragonWorld</h2>
+          <MainH2>Hello DragonWorld</MainH2>
         </IntroBox>
       </Scroll>
 

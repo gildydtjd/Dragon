@@ -30,6 +30,9 @@ function About(props) {
     align-items: center;
     position: relative;
     background-image: url("/assets/img/back3.jpg");
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   `;
   const AboutBox = styled.div`
     display: flex;
@@ -42,6 +45,10 @@ function About(props) {
     box-shadow: 3px 3px 3px 3px grey;
     margin-left: 60%;
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+      position: relative;
+      margin-left: unset;
+    }
   `;
 
   const AboutImage = styled.div`
@@ -101,6 +108,9 @@ function About(props) {
     height: 400px;
     visibility: ${visible};
     animation-play-state: ${playState};
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   `;
 
   const AboutTitle = styled.p`
@@ -204,7 +214,7 @@ function About(props) {
         <AboutTitle size="20px" weight="600">
           Tistory : {""}
           <AboutA
-            href="https:dragon-world.tistory.com"
+            href="https://dragon-world.tistory.com"
             target="_blank"
             rel="noreferrer"
           >
