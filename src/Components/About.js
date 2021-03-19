@@ -4,6 +4,9 @@ import styled from "styled-components";
 function About(props) {
   // const [playState, setPlayState] = useState("running");
   // const [visible, setVisible] = useState("visible");
+  // const FadeIn = keyframes`
+  // from { opacity: 0; }
+  // to   { opacity: 1; }`;
 
   const StyledDiv = styled.div`
     display: flex;
@@ -28,19 +31,18 @@ function About(props) {
 
     .contents__img-wrap {
       position: relative;
-      width: 300px;
-      height: 400px;
+      width: 320px;
+      height: 420px;
       background-color: #fff;
       border: 1px solid #c9c9c9;
       border-radius: 16px;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -150px;
+      margin-left: -160px;
       margin-top: -200px;
       box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
       text-align: center;
-
       .contents__img {
         width: 50%;
         height: 50%;
@@ -62,6 +64,8 @@ function About(props) {
           border: 1px solid #eee;
           border-radius: 2px;
           margin-right: 4px;
+          display: inline-block;
+          margin-bottom: 2px;
         }
       }
 
