@@ -24,12 +24,12 @@ const StyledDiv = styled.div`
       margin-left: unset;
     }
     img {
-      border: 1px solid #c9c9c9;
+      box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
     }
 
     img:nth-child(1) {
       width: 80%;
-      height: 50%;
+      height: 85%;
       margin-top: 20px;
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -40,18 +40,23 @@ const StyledDiv = styled.div`
     img:nth-child(2) {
       width: 40%;
       height: 40%;
+      display: none;
       @media screen and (max-width: 768px) {
         width: 100%;
         height: 140px;
+        display: unset;
       }
     }
 
     img:nth-child(3) {
       width: 40%;
       height: 40%;
+      display: none;
+
       @media screen and (max-width: 768px) {
         width: 100%;
         height: 140px;
+        display: unset;
       }
     }
   }
