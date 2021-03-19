@@ -44,10 +44,12 @@ function Main(props) {
   const ProjectInfoDiv = styled.div`
     .project__title {
       font-size: 18px;
+      font-weight: 700;
     }
 
     .project__contents {
       line-height: 30px;
+      font-weight: 600;
       @media screen and (max-width: 768px) {
         font-size: 15px;
       }
@@ -55,6 +57,8 @@ function Main(props) {
 
     .project__contents__sub {
       line-height: 30px;
+      font-weight: 600;
+
       @media screen and (max-width: 768px) {
         display: none;
       }
@@ -83,7 +87,7 @@ function Main(props) {
           ]}
         >
           <ProjectInfoDiv>
-            <p className="project__title">미술관 프로젝트</p>
+            <p className="project__title">Art gallery Project</p>
             <p className="project__contents">
               안녕하세요. <br />이 프로젝트는 미술작품 관람, 판매 관련
               포트폴리오입니다.

@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
   height: 100vh;
   text-align: left;
   align-items: center;
-  background-image: url(/assets/img/back5.jpg);
+  background-image: url(/assets/img/back6.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,7 +24,6 @@ const StyledDiv = styled.div`
       margin-left: unset;
     }
     img {
-      box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
     }
 
     img:nth-child(1) {
@@ -67,6 +66,7 @@ const StyledDiv = styled.div`
     padding: 16px;
     margin-right: 10%;
     color: #fff;
+
     @media screen and (max-width: 768px) {
       margin-right: unset;
       height: 450px;
