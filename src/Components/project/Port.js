@@ -27,6 +27,7 @@ function Port(props) {
 
     a {
       color: #fff;
+      display: block;
     }
   `;
   return (

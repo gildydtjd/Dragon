@@ -27,6 +27,7 @@ function Art(props) {
 
     a {
       color: #fff;
+      display: block;
     }
   `;
   return (
@@ -40,17 +41,19 @@ function Art(props) {
         이 프로젝트는 미술작품 관람, 판매 관련 프로젝트입니다.
       </p>
       <p className="project__contents">
-        media-query를 이용한 반응형 페이지의 적용과 styled-component, react
-        Hooks를 사용해보기 위해 만든 프로젝트입니다.
+        간단하게 component props 로 데이터를 전달 받고,
+      </p>
+      <p className="project__contents">
+        그 전달 받은 props를 통해 여러가지 화면으로 보여지게 되고, react
+        hook으로 상태를 관리하며,
       </p>
       <p className="project__contents__sub">
-        이 프로젝트를 진행하면서 느낀점은 styled-component를 사용함으로써,
-        상태에 따라 다른 스타일을 보여주기 편한 방식인 것 같습니다.
+        router를 통해 url에 맞는 페이지로 이동하는 프로젝트 입니다.
       </p>
       <p className="project__contents__sub">
-        하지만 styled-component만으로 스타일링을 하려하면 파일이 매우 길어지는
-        것 같아 적절한 상황에서 구역을 나누고 사용하면 참 편리할 것 같다
-        생각됩니다.
+        이 프로젝트를 만들며 느낀점은 useState를 통해 상태를 저장하고,
+        useEffect를 통해 저장된 상태가 바뀔때마다 실행할 함수를 지정하여, 데이터
+        상태관리에 대해 편리함을 느꼈습니다.
       </p>
     </ProjectInfoDiv>
   );
