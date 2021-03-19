@@ -70,7 +70,7 @@ const StyledDiv = styled.div`
     @media screen and (max-width: 768px) {
       margin-right: unset;
       height: 450px;
-      padding: 16px 0px;
+      padding: 16px 16px 16px 0px;
     }
   }
 `;
