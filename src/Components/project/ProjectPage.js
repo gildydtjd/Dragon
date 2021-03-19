@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -12,6 +14,7 @@ const StyledDiv = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   .project__img {
     width: 50%;
     padding: 16px;
@@ -19,44 +22,8 @@ const StyledDiv = styled.div`
     height: 500px;
     margin-left: 10%;
 
-    @media screen and (max-width: 768px) {
-      height: 450px;
-      margin-left: unset;
-    }
-    img {
-    }
-
-    img:nth-child(1) {
-      width: 80%;
-      height: 85%;
-      margin-top: 20px;
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 140px;
-      }
-    }
-
-    img:nth-child(2) {
-      width: 40%;
-      height: 40%;
-      display: none;
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 140px;
-        display: unset;
-      }
-    }
-
-    img:nth-child(3) {
-      width: 40%;
-      height: 40%;
-      display: none;
-
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 140px;
-        display: unset;
-      }
+    .carousel .slide img {
+      height: 350px;
     }
   }
 
@@ -64,24 +31,45 @@ const StyledDiv = styled.div`
     height: 500px;
     width: 50%;
     padding: 16px;
-    margin-right: 10%;
+    margin-right: 15%;
     color: #fff;
+    background-color: #00000090;
+  }
 
-    @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
+    display: block;
+
+    .project__img {
+      height: 450px;
+      margin-left: unset;
+      width: 100%;
+      padding: 0;
+    }
+
+    .project__info {
       margin-right: unset;
       height: 450px;
-      padding: 16px 16px 16px 0px;
+      padding: 16px;
+      width: calc(100% - 32px);
     }
   }
 `;
+
+const renderImageItem = (item) => {
+  return (
+    <div key={`item-${item}`}>
+      <img src={item} alt="" />
+    </div>
+  );
+};
 
 function ProjectPage({ projectName, projectImages, children }) {
   return (
     <StyledDiv>
       <div className="project__img">
-        <img alt="" src={projectImages[0]}></img>
-        <img alt="" src={projectImages[1]}></img>
-        <img alt="" src={projectImages[2]}></img>
+        <Carousel>
+          {projectImages.map((item) => renderImageItem(item))}
+        </Carousel>
       </div>
       <div className="project__info">
         <h1>{projectName}</h1>

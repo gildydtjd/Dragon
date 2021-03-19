@@ -97,10 +97,10 @@ function About(props) {
 
   const tech = ["React", "JavaScript", "Css", "Html", "styled-component"];
   const social = [
-    "/assets/img/github.svg",
-    "/assets/img/tistory.svg",
-    "/assets/img/instagram.svg",
-    "/assets/img/twitter.svg",
+    { name: "github", src: "/assets/img/github.svg" },
+    { name: "tistory", src: "/assets/img/tistory.svg" },
+    { name: "insta", src: "/assets/img/instagram.svg" },
+    { name: "twitter", src: "/assets/img/twitter.svg" },
   ];
 
   const renderTechItem = (item) => {
@@ -126,7 +126,18 @@ function About(props) {
         </div>
         <div className="contents__social">
           {social.map((item) => (
-            <img key={`social-${item}`} src={item} alt="" />
+            <img
+              key={`social-${item.name}`}
+              src={item.src}
+              alt=""
+              onClick={() => {
+                if (item.name === "github") {
+                  window.open("https://github.com/gildydtjd");
+                } else if (item.name === "tistory") {
+                  window.open("https://dragon-world.tistory.com/");
+                }
+              }}
+            />
           ))}
         </div>
       </div>
