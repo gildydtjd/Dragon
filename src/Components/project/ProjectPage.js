@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
   height: 100vh;
   text-align: left;
   align-items: center;
-  background-image: url(/assets/img/back6.jpg);
+  background-image: url(${(back) => back.ur});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,17 +38,23 @@ const StyledDiv = styled.div`
 
   @media screen and (max-width: 768px) {
     display: block;
-
+    .ibHDuN .project__img .carousel .slide img {
+      height: 42vh;
+    }
     .project__img {
-      height: 450px;
+      height: 40vh;
       margin-left: unset;
       width: 100%;
       padding: 0;
     }
+    .carousel {
+      height: 42vh;
+    }
 
     .project__info {
       margin-right: unset;
-      height: 450px;
+      height: 40vh;
+      margin-top: 15vh;
       padding: 16px;
       width: calc(100% - 32px);
     }
@@ -63,9 +69,9 @@ const renderImageItem = (item) => {
   );
 };
 
-function ProjectPage({ projectName, projectImages, children }) {
+function ProjectPage({ projectName, projectImages, back, children }) {
   return (
-    <StyledDiv>
+    <StyledDiv ur={back}>
       <div className="project__img">
         <Carousel>
           {projectImages.map((item) => renderImageItem(item))}

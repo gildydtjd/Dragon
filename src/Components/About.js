@@ -20,7 +20,9 @@ function About(props) {
       width: 50%;
       height: calc(100vh - 32px);
       padding: 16px;
-      background-image: url(/assets/img/back3.jpg);
+      background-image: url(/assets/img/back9.jpg);
+      background-position: center;
+      background-size: cover;
     }
 
     .contents__right {
