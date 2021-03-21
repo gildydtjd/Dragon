@@ -29,6 +29,56 @@ function About(props) {
       width: 50%;
       height: calc(100vh - 32px);
       padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(/assets/img/back11.jpg);
+      background-position: center;
+      background-size: cover;
+      .contents__right__box {
+        height: 80%;
+        width: 70%;
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .contents__right--ul {
+        width: 100%;
+        height: 50%;
+        list-style: none;
+        li {
+          color: black;
+          height: 200px;
+          border: 1px solid #c9c9c9;
+          margin: 10px;
+          border-radius: 10px;
+          span {
+            color: white;
+            padding: 30px;
+            display: block;
+          }
+          :nth-child(1) {
+            background-image: url(/assets/img/project-portfolio/port__1.png);
+            background-position: center;
+            background-size: cover;
+          }
+          :nth-child(2) {
+            background-image: url(/assets/img/project-portfolio/art__1.png);
+            background-position: center;
+            background-size: cover;
+          }
+          :nth-child(3) {
+            background-image: url(/assets/img/project-portfolio/dayoff__1.jpg);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+        li:hover {
+          opacity: 0.4;
+          border: 1px solid black;
+        }
+      }
     }
 
     .contents__img-wrap {
@@ -116,7 +166,22 @@ function About(props) {
   return (
     <StyledDiv>
       <div className="contents__left"></div>
-      <div className="contents__right"></div>
+      <div className="contents__right">
+        <div className="contents__right__box">
+          Portfolio List
+          <ul className="contents__right--ul">
+            <li>
+              <span>My Portfolio</span>
+            </li>
+            <li>
+              <span>Art Gellary</span>
+            </li>
+            <li>
+              <span>DayOff</span>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="contents__img-wrap">
         <img className="contents__img" src="/assets/img/dragon.jpg" alt="" />
         <div className="contents__name">

@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import "../main.css";
 import About from "./About";
 import Art from "./project/Art";
+import Dayoff from "./project/Dayoff";
 import Port from "./project/Port";
 import ProjectPage from "./project/ProjectPage";
 
@@ -80,6 +81,18 @@ function Main(props) {
           ]}
         >
           <Art />
+        </ProjectPage>
+      </Scroll>
+      <Scroll>
+        <ProjectPage
+          projectName="DayOff"
+          back="/assets/img/back12.jpg"
+          projectImages={[
+            "/assets/img/project-portfolio/dayoff__1.jpg",
+            "/assets/img/project-portfolio/dayoff__2.jpg",
+          ]}
+        >
+          <Dayoff />
         </ProjectPage>
       </Scroll>
     </div>
