@@ -32,7 +32,7 @@ function About(props) {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url(/assets/img/back11.jpg);
+      background-image: url(/assets/img/back13.jpg);
       background-position: center;
       background-size: cover;
       .contents__right__box {
@@ -47,17 +47,15 @@ function About(props) {
         width: 100%;
         height: 50%;
         list-style: none;
+
         li {
           color: black;
           height: 200px;
           border: 1px solid #c9c9c9;
           margin: 10px;
           border-radius: 10px;
-          span {
-            color: white;
-            padding: 30px;
-            display: block;
-          }
+          cursor: pointer;
+
           :nth-child(1) {
             background-image: url(/assets/img/project-portfolio/port__1.png);
             background-position: center;
@@ -73,9 +71,14 @@ function About(props) {
             background-position: center;
             background-size: cover;
           }
+          span {
+            color: white;
+            padding: 30px;
+            display: block;
+          }
         }
         li:hover {
-          opacity: 0.4;
+          transform: scale(0.9);
           border: 1px solid black;
         }
       }

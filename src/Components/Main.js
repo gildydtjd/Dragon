@@ -56,10 +56,10 @@ function Main(props) {
         <About />
       </Scroll>
 
-      <Scroll>
+      <Scroll className="scroll_1">
         <ProjectPage
           projectName="Portfolio"
-          back="/assets/img/back10.jpg"
+          back="/assets/img/back11.jpg"
           projectImages={[
             "/assets/img/project-portfolio/port__1.png",
             "/assets/img/project-portfolio/port__2.png",
@@ -70,7 +70,7 @@ function Main(props) {
         </ProjectPage>
       </Scroll>
 
-      <Scroll>
+      <Scroll className="scroll_2">
         <ProjectPage
           projectName="Tired Art"
           back="/assets/img/back6.jpg"
@@ -83,7 +83,7 @@ function Main(props) {
           <Art />
         </ProjectPage>
       </Scroll>
-      <Scroll>
+      <Scroll className="scroll_3">
         <ProjectPage
           projectName="DayOff"
           back="/assets/img/back12.jpg"
