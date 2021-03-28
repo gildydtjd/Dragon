@@ -34,7 +34,7 @@ function Dayoff(props) {
     <ProjectInfoDiv>
       <p className="project__title">Shopping Mall Project</p>
       <a href="https://github.com/gildydtjd/DayOff">
-        https://github.com/gildydtjd/art
+        https://github.com/gildydtjd/DayOff
       </a>
       <p className="project__contents">이 프로젝트는 쇼핑몰 프로젝트입니다.</p>
       <p className="project__contents">
