@@ -41,12 +41,8 @@ function Art(props) {
         이 프로젝트는 미술작품 관람, 판매 관련 프로젝트입니다.
       </p>
       <p className="project__contents">
-        간단하게 component props 로 데이터를 전달 받고, 그 전달 받은 props를
-        통해 여러가지 화면으로 보여지게 되고,
-      </p>
-      <p className="project__contents__sub">
-        react hook으로 상태를 관리하며, router를 통해 url에 맞는 페이지로
-        이동하는 프로젝트 입니다.
+        간단하게 component 간 데이터 교환, react hook으로 상태를 관리하며,
+        router를 통해 url에 맞는 페이지로 이동하는 프로젝트 입니다.
       </p>
       <p className="project__contents__sub">
         이 프로젝트를 만들며 느낀점은 useState를 통해 상태를 저장하고,
