@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
   }
 
   .project__info {
-    height: 500px;
+    height: 470px;
     width: 50%;
     padding: 16px;
     margin-right: 15%;

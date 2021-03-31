@@ -174,13 +174,35 @@ function About(props) {
           Portfolio List
           <ul className="contents__right--ul">
             <li>
-              <span>My Portfolio</span>
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/gildydtjd/dragon"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>My Portfolio</span>
+              </a>
             </li>
             <li>
-              <span>Art Gellary</span>
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/gildydtjd/art"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Art Gellary</span>
+              </a>
             </li>
+
             <li>
-              <span>DayOff</span>
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/gildydtjd/DayOff"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>DayOff</span>
+              </a>
             </li>
           </ul>
         </div>
