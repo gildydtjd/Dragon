@@ -108,7 +108,6 @@ function Main(props) {
           {i === 0 ? <Port /> : i === 1 ? <Art /> : i === 2 ? <Dayoff /> : null}
         </RenderProjectItem>
       ))}
-      <Scroll></Scroll>
     </div>
   );
 }

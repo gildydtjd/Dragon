@@ -154,8 +154,6 @@ function About(props) {
   const social = [
     { name: "github", src: "/assets/img/github.svg" },
     { name: "tistory", src: "/assets/img/tistory.svg" },
-    { name: "insta", src: "/assets/img/instagram.svg" },
-    { name: "twitter", src: "/assets/img/twitter.svg" },
   ];
 
   const renderTechItem = (item) => {
