@@ -15,8 +15,7 @@ function Art(props) {
         font-size: 15px;
       }
     }
-
-    .project__contents__sub {
+    x x .project__contents__sub {
       line-height: 30px;
       font-weight: 600;
 
